@@ -73,3 +73,9 @@
     height: 200px;
     background-color: #F0F0F0;
 }
+
+.login {
+    padding: 0 10px;
+    margin: 10px;
+    cursor: pointer;
+}
