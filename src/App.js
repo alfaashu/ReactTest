@@ -2,6 +2,8 @@ import React from "react"
 import ReactDOM, { createRoot } from "react-dom/client"
 import Header from "./components/Header"
 import Body from "./components/Body"
+import { createBrowserRouter, RouterProvider } from "react-router"
+import About from "./components/About"
 
 const elem = <span> Element</span>
 
@@ -16,8 +18,18 @@ const AppLayout = () => {
     )
 }
 
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout/>,
+    },
+    {
+        path: "/About",
+        element: <About/>,
+    },
+])
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<AppLayout/>)
+root.render(<RouterProvider router={appRouter}/>)
 
 
