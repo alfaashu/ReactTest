@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
     const {name, cuisines, costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info;
 
     const {itemCards} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
-                        
+
 
     console.log(itemCards);
     
