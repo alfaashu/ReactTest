@@ -1,9 +1,13 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const User = ({name}) => {
 
     const [count, setCount] = useState(0)
     const [count2] = useState(2)
+
+    useEffect(()=> {
+
+    }, [])
 
     return (
         <div className="user-card">
