@@ -9,7 +9,6 @@ class About extends React.Component{
 
     componentDidMount(){
         console.log("Child compoenet did mount");
-        
     }
 
     render() {
