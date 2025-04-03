@@ -12,6 +12,8 @@ const Body = () => {
     const [filteredRestaurant, setFilteredRestaurant] = useState([])
     const [searchText, setSearchText] = useState("")
 
+    console.log("Body Rendered", listOfRestaurant);
+    
 
     useEffect(() => {
         fetchData()
@@ -56,7 +58,7 @@ const Body = () => {
                 </div>
                 
             </div>
-            <div className="flex wrap">
+            <div className="flex flex-wrap">
                 {filteredRestaurant.map((restaurant) => (
                 <Link key={restaurant.info.id} 
                 to={"/restaurants/"+ restaurant.info.id}>
