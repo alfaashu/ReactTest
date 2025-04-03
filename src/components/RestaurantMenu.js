@@ -10,7 +10,12 @@ const RestaurantMenu = () => {
 
     const {name, cuisines, costForTwoMessage} = resInfo?.cards[2]?.card?.card?.info
     
-    const {itemCards} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
+    const cards =
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+
+    let itemCards =
+    cards.find((c) => c?.card?.card?.itemCards)?.card?.card?.itemCards || [];
+    
 
     return (
         <div className="menu">

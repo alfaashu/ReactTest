@@ -10,10 +10,7 @@ const Body = () => {
 
     const [listOfRestaurant, setListOfRestaurant] = useState([])
     const [filteredRestaurant, setFilteredRestaurant] = useState([])
-    const [searchText, setSearchText] = useState("")
-
-    console.log("Body Rendered", listOfRestaurant);
-    
+    const [searchText, setSearchText] = useState("")  
 
     useEffect(() => {
         fetchData()
@@ -22,7 +19,6 @@ const Body = () => {
     const fetchData = async() => {
         const data = await fetch(SWIGGY_API_URL)
         const json = await data.json()
-        
     
         setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
