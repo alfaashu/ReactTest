@@ -3,7 +3,7 @@ import { CDN_URL } from "../utils/constants"
 const RestaurantCard = (props) => {
     const {resData} = props
 
-    const {name, cuisines, avgRating, costForTwo, cloudinaryImageId } = resData?.info
+    const {name, cuisines, avgRating, costForTwo, cloudinaryImageId} = resData?.info
 
     const {deliveryTime} = resData?.info?.sla
 
@@ -21,6 +21,19 @@ const RestaurantCard = (props) => {
             <h4>{deliveryTime} mins</h4>
         </div>
     )
+}
+
+// Higher order function: it taked input RestaurantCard and gives output RestaurantCard promoted
+
+export const withOpenLabel = (RestaurantCard) => {
+    return(props) => {
+        return (
+            <div>
+                <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Open</label>
+                <RestaurantCard {...props} />
+            </div>
+        )
+    }
 }
 
 export default RestaurantCard

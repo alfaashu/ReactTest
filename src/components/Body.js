@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard"
+import RestaurantCard, {withOpenLabel} from "./RestaurantCard"
 import { useEffect, useState } from "react"
 import Shimmer from "./Shimmer"
 import { Link } from "react-router"
@@ -10,7 +10,10 @@ const Body = () => {
 
     const [listOfRestaurant, setListOfRestaurant] = useState([])
     const [filteredRestaurant, setFilteredRestaurant] = useState([])
-    const [searchText, setSearchText] = useState("")  
+
+    const [searchText, setSearchText] = useState("")
+
+    const RestaurantCardOpen = withOpenLabel(RestaurantCard)
 
     useEffect(() => {
         fetchData()
@@ -58,7 +61,8 @@ const Body = () => {
                 {filteredRestaurant.map((restaurant) => (
                 <Link key={restaurant.info.id} 
                 to={"/restaurants/"+ restaurant.info.id}>
-                    <RestaurantCard resData={restaurant}/>
+                    { /* If the restaurant rating is greater than 4 then add a promoted lable */
+                    restaurant.info.isOpen ? <RestaurantCardOpen resData={restaurant}/> : <RestaurantCard resData={restaurant}/>}
                 </Link> ))}
             </div>
         </div>
