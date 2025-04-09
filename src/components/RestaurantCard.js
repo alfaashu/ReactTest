@@ -35,5 +35,4 @@ export const withOpenLabel = (RestaurantCard) => {
         )
     }
 }
-
 export default RestaurantCard
