@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is Namaste React test",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "test": "jest"
   },
   "keywords": [],
@@ -20,5 +20,6 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.0",
     "tailwindcss": "^4.1.0"
-  }
+  },
+  "homepage": "https://alfaashu.github.io/ReactTest",
 }
