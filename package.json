@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "This is Namaste React test",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "test": "jest"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.13.3",
     "process": "^0.11.10"
   },
@@ -22,4 +24,6 @@
     "tailwindcss": "^4.1.0"
   },
   "homepage": "https://alfaashu.github.io/ReactTest",
+  "source": "index.html"
+
 }
