@@ -37,3 +37,12 @@ Whenever a state vairable changes, react re-render the component
 
 1. useState() - Superpowerful State variables. Keep the UI in sync with the variable values
 2. useEffect()
+
+
+# Redux Toolkit
+    - Install @reduxjs/toolkit and react-redux
+    - Build our store
+    - Connect our store to our app
+    - Slice (cartSlice)
+    - Dispatch(action)
+    - Selector
